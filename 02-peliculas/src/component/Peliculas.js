@@ -11,4 +11,10 @@ function Peliculas(props) {
     );
 
 }
+
+Peliculas.defaultProps={
+    titulo:"Sin titulo",
+    puntuacion:"0",
+    generos:["sin genero", "sin genero"]
+}
 export default Peliculas;
