@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 function Peliculas(props) {
     return (
         <div className="Pelicula">
@@ -14,7 +15,12 @@ function Peliculas(props) {
 
 Peliculas.defaultProps={
     titulo:"Sin titulo",
-    puntuacion:"0",
+    puntuacion:8,
     generos:["sin genero", "sin genero"]
+}
+Peliculas.propTypes={
+    titulo:PropTypes.string,
+    puntuacion:PropTypes.number,
+    generos:PropTypes.array
 }
 export default Peliculas;
