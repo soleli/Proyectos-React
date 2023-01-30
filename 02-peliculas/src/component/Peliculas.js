@@ -1,11 +1,11 @@
-function Peliculas() {
+function Peliculas(props) {
     return (
         <div className="Pelicula">
-            <h2>Titulo</h2>
-            <p>puntuación</p>
+            <h2>{props.titulo}</h2>
+            <p>{props.puntuacion}</p>
             <ul>
-                <li>genero1</li>
-                <li>genero2</li>
+                {props.generos.map((genero,i)=><li key={genero+i}>{genero}</li>)}
+                
             </ul>
         </div>
     );
