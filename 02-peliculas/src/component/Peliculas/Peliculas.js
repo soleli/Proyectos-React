@@ -1,3 +1,4 @@
+import './Peliculas.css'
 import PropTypes from 'prop-types';
 function Peliculas(props) {
     let listaDeGeneros;
@@ -10,7 +11,7 @@ function Peliculas(props) {
         listaDeGeneros = "Sin genero"
     }
     return (
-        <div className="Pelicula">
+        <div className="pelicula">
             <h2>{props.titulo}</h2>
             <p>{props.puntuacion}</p>
             <ul>
