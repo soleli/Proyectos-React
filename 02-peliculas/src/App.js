@@ -1,6 +1,6 @@
 import './App.css';
-import ContenedorPublicidad from './component/ContenedorPublicidad';
-import TiraPeliculas from './component/TiraPeliculas';
+import ContenedorPublicidad from './component/ContenedorPublicidad/ContenedorPublicidad';
+import TiraPeliculas from './component/TiraPeliculas/TiraPeliculas';
 
 function App() {
   return (

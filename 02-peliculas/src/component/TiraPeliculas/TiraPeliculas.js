@@ -1,4 +1,4 @@
-import Peliculas from "./Peliculas";
+import Peliculas from "../Peliculas/Peliculas";
 
 function TiraPeliculas(){
     return(
