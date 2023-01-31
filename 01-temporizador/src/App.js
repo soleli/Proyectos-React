@@ -3,7 +3,7 @@ import Clock from "./component/Clock";
 function App() {
   return (
     <div>
-      <Clock />
+      <Clock hora={new Date()} />
     </div>
   );
 }
