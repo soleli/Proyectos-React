@@ -3,7 +3,7 @@ function SideBar(){
     return(
         <div>
         <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+            <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                 <div classNameName="sidebar-brand-icon">
                     <img className="w-100" src={logoDH} alt="Digital House" />
                 </div>

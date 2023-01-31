@@ -1,10 +1,12 @@
 import '../assets/css/app.css'
+import ContentWrapper from './ContentWrapper';
 import SideBar from "./SideBar";
 
 function App() {
   return (
-    <div className="App">
+    <div id="wrapper">
       <SideBar/>
+      <ContentWrapper/>
     </div>
   );
 }
