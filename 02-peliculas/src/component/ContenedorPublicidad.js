@@ -1,7 +1,7 @@
-function ContenedorPublicidad() {
+function ContenedorPublicidad(props) {
     return (
         <div>
-
+            {props.children}
         </div>
     );
 }

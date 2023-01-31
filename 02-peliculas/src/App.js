@@ -1,12 +1,19 @@
 import './App.css';
+import ContenedorPublicidad from './component/ContenedorPublicidad';
 import TiraPeliculas from './component/TiraPeliculas';
 
 function App() {
   return (
     <div>
-      <TiraPeliculas/>
-      <TiraPeliculas/>
-      <TiraPeliculas/>
+      <ContenedorPublicidad>
+        <h2>Aqui! Publicidad1!</h2>
+      </ContenedorPublicidad>
+      <TiraPeliculas />
+      <ContenedorPublicidad>
+        <h1>Aqui! Publicidad2!</h1>
+      </ContenedorPublicidad>
+      <TiraPeliculas />
+      <TiraPeliculas />
     </div>
   );
 }
