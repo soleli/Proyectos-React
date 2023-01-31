@@ -1,4 +1,5 @@
 import ContentRowMovies from "./ContentRowMovies";
+import GenresInDb from "./GenresInDb";
 import LastMoviesInDb from "./LastMovieInDb";
 
 function ContentRowTop() {
@@ -10,6 +11,7 @@ function ContentRowTop() {
             <ContentRowMovies />
             <div className="row">
                 <LastMoviesInDb />
+                <GenresInDb/>
             </div>
         </div>
     )
