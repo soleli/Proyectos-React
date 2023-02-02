@@ -6,7 +6,7 @@ import TiraPeliculas from './component/TiraPeliculas/TiraPeliculas';
 function App() {
   return (
     <div>
-      <Contador inicial={8}/>
+      <Contador inicial={0}/>
       <ContenedorPublicidad>
         <h2>Aqui! Publicidad1!</h2>
       </ContenedorPublicidad>
