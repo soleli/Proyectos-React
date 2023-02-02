@@ -6,19 +6,19 @@ function ContentRowTop() {
   let metrics=[
     {
         title:"MOVIES IN DATA BASE",
-        quantity:"21",
+        quantity:21,
         icon:"fa-film",
         color:"primary" 
     },
     {
         title:"TOTAL AWARDS",
-        quantity:"79",
+        quantity:79,
         icon:"fa-award",
         color:"success" 
     },
     {
         title:"ACTORS QUANTITY",
-        quantity:"49",
+        quantity:49,
         icon:"fa-user",
         color:"warning" 
     }
