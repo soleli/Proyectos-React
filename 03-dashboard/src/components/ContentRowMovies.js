@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 function ContentRowMovies(props) {
     return (
 
@@ -17,5 +18,11 @@ function ContentRowMovies(props) {
             </div>
         </div>
     );
+}
+ContentRowMovies.propTypes={
+    title:PropTypes.string.isRequired,
+    quantity:PropTypes.number.isRequired,
+    color:PropTypes.string.isRequired,
+    icon:PropTypes.string.isRequired
 }
 export default ContentRowMovies;
