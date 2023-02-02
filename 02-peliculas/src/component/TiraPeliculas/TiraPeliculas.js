@@ -1,9 +1,18 @@
 import Peliculas from "../Peliculas/Peliculas";
 import { Component } from "react";
 class TiraPeliculas extends Component {
+    lanzarAlerta(){
+        alert('¡hiciste click!')
+    }
+    cambiarAmarillo(){
+        document.querySelector("body").style.background="yellow"
+    }
+    cambiarRosa(){
+        document.querySelector("body").style.background="pink"
+    }
     render() {
         return (
-            <div>
+            <div onClick={this.lanzarAlerta} onMouseOver={this.cambiarAmarillo} onMouseOut={this.cambiarRosa}>
                 <Peliculas titulo="Inception" puntuacion="8.0" generos={["Ciencia ficción", "Thriller", "Intriga", "Acción"]} />
                 <Peliculas titulo="Avatar " puntuacion="7.2" generos={["Ciencia ficción", "Aventuras"]} />
                 <Peliculas titulo="Joker" puntuacion="8.0" generos={["Thriller", "Drama"]} />
