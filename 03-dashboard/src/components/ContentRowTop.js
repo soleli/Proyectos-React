@@ -30,7 +30,7 @@ function ContentRowTop() {
                 <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
             </div>
             <div className="row">
-                {metrics.map(metric=><ContentRowMovies title={metric.title} quantity={metric.quantity} icon={metric.icon} color={metric.color} />)}
+                {metrics.map((metric,i)=><ContentRowMovies key={i} title={metric.title} quantity={metric.quantity} icon={metric.icon} color={metric.color} />)}
             </div>
            
             <div className="row">
