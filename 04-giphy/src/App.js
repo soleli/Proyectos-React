@@ -5,6 +5,12 @@ import { Component } from 'react';
 
 class App extends Component {
 
+  constructor(props){
+    super(props);
+    this.state={
+      gifs:[]
+    }
+  }
   apiCall(url, consecuencia) {
     fetch(url)
       .then(response => response.json())
@@ -12,10 +18,13 @@ class App extends Component {
       .catch(err => console.log(err))
   }
   mostrarGif = (data) => {
-    console.log(data);
+    this.setState({
+      gifs:data.data
+    })
+    console.log(this.state.gifs);
   }
   componentDidMount() {
-    this.apiCall("https://api.giphy.com/v1/gifs/random?api_key=nIq9C1NnwmZ3C3rYnVDbCT0M4bZAnyzN&tag=&rating=g", this.mostrarGif)
+    this.apiCall("https://api.giphy.com/v1/gifs/trending?api_key=nIq9C1NnwmZ3C3rYnVDbCT0M4bZAnyzN&limit=25&rating=g", this.mostrarGif)
   }
   render() {
     return (
@@ -23,7 +32,7 @@ class App extends Component {
         <Nav />
         <div className="container">
           <div className="row text-center">
-            <Gif />
+            <Gif gifs={this.state.gifs}/>
           </div>
         </div>
       </div>
