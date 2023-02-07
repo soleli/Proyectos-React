@@ -1,5 +1,5 @@
 {
-  "name": "giphy-app",
+  "name": "04-giphy",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
