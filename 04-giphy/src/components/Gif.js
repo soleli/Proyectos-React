@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 class Gif extends Component {
 
     constructor(props) {
@@ -10,8 +11,14 @@ class Gif extends Component {
         let contenido;
         if ((this.props.gifs).length > 1) {
             contenido = this.props.gifs.map((gif,i) =>
-
-                <img key={i} src={gif.images.original.url} alt="" style={{width: "100%", display: "block"}} />
+            <LazyLoadImage
+            key={i}
+            alt={gif.title}
+            src={gif.images.original.url} 
+            placeholderSrc={gif.images.original.url}
+            effect="blur"
+            width="100%"
+          />
 
             )
         }

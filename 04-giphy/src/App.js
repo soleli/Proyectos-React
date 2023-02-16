@@ -30,7 +30,7 @@ class App extends Component {
 
   }
   componentDidMount() {
-    this.apiCall("https://api.giphy.com/v1/gifs/trending?api_key=nIq9C1NnwmZ3C3rYnVDbCT0M4bZAnyzN&limit=25&rating=g", this.mostrarGif)
+    this.apiCall("https://api.giphy.com/v1/gifs/trending?api_key=nIq9C1NnwmZ3C3rYnVDbCT0M4bZAnyzN&limit=100&rating=g", this.mostrarGif)
   }
   render() {
     return (
