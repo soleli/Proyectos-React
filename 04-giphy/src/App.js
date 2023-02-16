@@ -8,8 +8,9 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state={
-      gifs:[]
+      gifs:""
     }
+    this.handleClick=this.handleClick.bind(this);
   }
   apiCall(url, consecuencia) {
     fetch(url)
@@ -23,16 +24,24 @@ class App extends Component {
     })
     console.log(this.state.gifs);
   }
+  handleClick(){
+   
+    this.apiCall("https://api.giphy.com/v1/gifs/random?api_key=nIq9C1NnwmZ3C3rYnVDbCT0M4bZAnyzN&tag=&rating=g", this.mostrarGif)
+
+  }
   componentDidMount() {
     this.apiCall("https://api.giphy.com/v1/gifs/trending?api_key=nIq9C1NnwmZ3C3rYnVDbCT0M4bZAnyzN&limit=25&rating=g", this.mostrarGif)
   }
   render() {
     return (
       <div>
-        <Nav />
+        <Nav onClick={this.handleClick}/>
         <div className="container">
           <div className="row text-center">
-            <Gif gifs={this.state.gifs}/>
+            <Gif 
+            gifs={this.state.gifs}/>
+           
+            
           </div>
         </div>
       </div>

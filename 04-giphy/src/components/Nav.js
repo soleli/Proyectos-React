@@ -1,6 +1,9 @@
 import { Component } from "react"
 class Nav extends Component {
 
+    constructor(props){
+        super(props);
+    }
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -13,7 +16,8 @@ class Nav extends Component {
                 <div className="collapse navbar-collapse" id="navbarResponsive">
                     <ul className="nav ml-auto">
                         <li className="nav-item">
-                            <button className="btn btn-success">Cargar random</button>
+                            <button className="btn btn-success"
+                            onClick={this.props.onClick}>Cargar random</button>
                         </li>
                     </ul>
                 </div>
