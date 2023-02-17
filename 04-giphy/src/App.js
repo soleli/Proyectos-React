@@ -2,6 +2,7 @@ import './App.css';
 import Gif from './components/Gif';
 import Nav from './components/Nav';
 import { Component } from 'react';
+import SearchBar from './components/SeachBar';
 
 class App extends Component {
 
@@ -37,7 +38,8 @@ class App extends Component {
       <div>
         <Nav onClick={this.handleClick}/>
         <div className="container">
-          <div className="row text-center">
+          <div className="row d-flex justify-content-center">
+            <SearchBar/>
             <Gif 
             gifs={this.state.gifs}/>
            
