@@ -1,11 +1,14 @@
 import { Component } from "react";
 
 class SearchBar extends Component {
+    constructor(props){
+        super(props)
+    }
 
     render() {
         return(
-        <div class=" mb-3">
-            <input type="text" class="form-control" id="exampleFormControlInput1" />
+        <div className=" mb-3">
+            <input type="text" className="form-control" onKeyUp={(e) => this.props.handleKeyPress(e)}  />
         </div>
         );
     }

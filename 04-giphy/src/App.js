@@ -12,6 +12,7 @@ class App extends Component {
       gifs:""
     }
     this.handleClick=this.handleClick.bind(this);
+    this.handleKeyPress=this.handleKeyPress.bind(this);
   }
   apiCall(url, consecuencia) {
     fetch(url)
@@ -25,10 +26,17 @@ class App extends Component {
     })
     console.log(this.state.gifs);
   }
-  handleClick(){
-   
+  handleClick(){ 
     this.apiCall("https://api.giphy.com/v1/gifs/random?api_key=nIq9C1NnwmZ3C3rYnVDbCT0M4bZAnyzN&tag=&rating=g", this.mostrarGif)
-
+  }
+  handleKeyPress(e){
+    this.setState({
+      gifs:""
+    })
+   let search=e.target.value;
+   console.log(search)
+   this.apiCall(`https://api.giphy.com/v1/gifs/search?api_key=nIq9C1NnwmZ3C3rYnVDbCT0M4bZAnyzN&q=${search}&limit=1000&offset=0&rating=g&lang=es`, this.mostrarGif)
+   
   }
   componentDidMount() {
     this.apiCall("https://api.giphy.com/v1/gifs/trending?api_key=nIq9C1NnwmZ3C3rYnVDbCT0M4bZAnyzN&limit=100&rating=g", this.mostrarGif)
@@ -39,7 +47,7 @@ class App extends Component {
         <Nav onClick={this.handleClick}/>
         <div className="container">
           <div className="row d-flex justify-content-center">
-            <SearchBar/>
+            <SearchBar handleKeyPress={(e) => this.handleKeyPress(e)} />
             <Gif 
             gifs={this.state.gifs}/>
            
