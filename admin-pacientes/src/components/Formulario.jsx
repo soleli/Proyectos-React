@@ -1,8 +1,10 @@
 
 const Formulario = () => {
-  return (
-    <div>Formulario</div>
-  )
+    return (
+        <div className="md:w-1/3 px-5  h-screen text-white">
+            Formulario
+        </div>
+    )
 }
 
 export default Formulario
