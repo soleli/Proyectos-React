@@ -1,10 +1,18 @@
+import { useState } from "react"
 
 const Formulario = () => {
+    const [nombre,setNombre]= useState("")
+    const [propietario,setPropietario]= useState("")
+    const [telefono,setTelefono]= useState("")
+    const [fecha,setFecha]= useState("")
+    const [sintomas,setSintomas]= useState("")
+
+   
     return (
         <div className="md:w-1/3 px-5 py-10 ">
             <p className="text-white text-center text-2xl font-bold">Seguimiento de Pacientes</p>
             <p className="text-indigo-300 italic text-center mb-10 text-md"> Añade Pacientes y Administralos</p>
-            <form>
+            <form >
                 <div className="mb-6">
                     <label htmlFor="mascota" className="block text-white uppercase">
                      Nombre de Mascota
@@ -14,6 +22,8 @@ const Formulario = () => {
                         type="text"
                         placeholder="Ingrese el nombre de la mascota"
                         className="w-full block focus:shadow-md p-2 mt-2 rounded-md text-indigo-900 focus:ring-4 ring-indigo-300" 
+                        value={nombre}
+                        onChange={(e)=>setNombre(e.target.value)}
                     />
                 </div>
                 <div className="mb-6">
@@ -25,6 +35,7 @@ const Formulario = () => {
                         type="text"
                         placeholder="Ingrese el nombre del propietario"
                         className="w-full block focus:shadow-md p-2 mt-2 rounded-md text-indigo-900 focus:ring-4 ring-indigo-300" 
+                        onChange={(e)=>setPropietario(e.target.value)}                    
                     />
                 </div>
                 <div className="mb-6">
@@ -36,6 +47,7 @@ const Formulario = () => {
                         type="text"
                         placeholder="Ingrese el número de teléfono"
                         className="w-full block focus:shadow-md p-2 mt-2 rounded-md text-indigo-900 focus:ring-4 ring-indigo-300" 
+                        onChange={(e)=>setTelefono(e.target.value)}
                     />
                 </div>
                 <div className="mb-6">
@@ -47,6 +59,7 @@ const Formulario = () => {
                         type="date"
                         placeholder="Ingrese el número de teléfono"
                         className="w-full block focus:shadow-md p-2 mt-2 rounded-md text-indigo-900 focus:ring-4 ring-indigo-300" 
+                        onChange={(e)=>setFecha(e.target.value)}
                     />
                 </div>
                 <div className="mb-6">
@@ -58,6 +71,7 @@ const Formulario = () => {
                         type="date"
                         placeholder="Describe los sintomas"
                         className="w-full block focus:shadow-md p-2 mt-2 rounded-md text-indigo-900 focus:ring-4 ring-indigo-300" 
+                        onChange={(e)=>setSintomas(e.target.value)}
                     />
                 </div>
                 <input 
